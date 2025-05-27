@@ -8,22 +8,22 @@ function BeforeAfterCarousel() {
     {
       id: 1,
       title: "Nettoyage Extérieur Complet",
-      before: "/king-auto95/placeholder.svg?height=400&width=600&text=AVANT",
-      after: "/king-auto95/placeholder.svg?height=400&width=600&text=APRÈS",
+      before: "/placeholder.svg?height=400&width=600&text=AVANT",
+      after: "/placeholder.svg?height=400&width=600&text=APRÈS",
       description: "Transformation complète d'une berline allemande",
     },
     {
       id: 2,
       title: "Rénovation Intérieur Cuir",
-      before: "/king-auto95/placeholder.svg?height=400&width=600&text=AVANT",
-      after: "/king-auto95/placeholder.svg?height=400&width=600&text=APRÈS",
+      before: "/placeholder.svg?height=400&width=600&text=AVANT",
+      after: "/placeholder.svg?height=400&width=600&text=APRÈS",
       description: "Restauration des sièges en cuir d'un SUV de luxe",
     },
     {
       id: 3,
       title: "Détachage Professionnel",
-      before: "/king-auto95/placeholder.svg?height=400&width=600&text=AVANT",
-      after: "/king-auto95/placeholder.svg?height=400&width=600&text=APRÈS",
+      before: "/placeholder.svg?height=400&width=600&text=AVANT",
+      after: "/placeholder.svg?height=400&width=600&text=APRÈS",
       description: "Élimination de taches tenaces sur moquettes",
     },
   ];
@@ -55,10 +55,7 @@ function BeforeAfterCarousel() {
                   AVANT
                 </div>
                 <img
-                  src={
-                    slides[currentSlide].before ||
-                    "/king-auto95/placeholder.svg"
-                  }
+                  src={slides[currentSlide].before || "/placeholder.svg"}
                   alt="Avant nettoyage"
                   width={600}
                   height={400}
@@ -74,9 +71,7 @@ function BeforeAfterCarousel() {
                   APRÈS
                 </div>
                 <img
-                  src={
-                    slides[currentSlide].after || "/king-auto95/placeholder.svg"
-                  }
+                  src={slides[currentSlide].after || "/placeholder.svg"}
                   alt="Après nettoyage"
                   width={600}
                   height={400}

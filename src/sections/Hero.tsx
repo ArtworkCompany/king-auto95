@@ -54,7 +54,7 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/30 to-yellow-500/20 rounded-2xl blur-3xl"></div>
             <div className="absolute -inset-4 bg-gradient-to-r from-yellow-400/20 via-transparent to-yellow-400/20 rounded-3xl blur-2xl"></div>
             <img
-              src="/king-auto95/placeholder.svg?height=500&width=600"
+              src="/placeholder.svg?height=500&width=600"
               alt="Luxury black car"
               width={600}
               height={500}
