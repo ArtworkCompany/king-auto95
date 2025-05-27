@@ -7,18 +7,18 @@ const WhyChooseUs = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className="inline-flex items-center space-x-2 mb-8">
-              <div className="h-1 w-8 bg-yellow-400"></div>
-              <Crown className="h-6 w-6 text-yellow-400" />
-              <div className="h-1 w-8 bg-yellow-400"></div>
+              <div className="h-1 w-8 bg-gold"></div>
+              <Crown className="h-6 w-6 text-gold" />
+              <div className="h-1 w-8 bg-gold"></div>
             </div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-yellow-400 via-yellow-300 to-yellow-500 bg-clip-text text-transparent">
+            <h2 className="text-4xl lg:text-5xl font-bold mb-8 bg-gradient-to-r from-gold via-gold to-gold bg-clip-text text-transparent">
               Pourquoi nous choisir ?
             </h2>
             <div className="space-y-6">
-              <div className="flex items-start space-x-4 p-4 rounded-lg border border-yellow-400/20 bg-gradient-to-r from-yellow-400/5 to-transparent">
-                <Award className="h-8 w-8 text-yellow-400 mt-1 flex-shrink-0" />
+              <div className="flex items-start space-x-4 p-4 rounded-lg border border-gold/20 bg-gradient-to-r from-gold/5 to-transparent">
+                <Award className="h-8 w-8 text-gold mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-yellow-400">
+                  <h3 className="text-xl font-semibold mb-2 text-gold">
                     Service Professionnel
                   </h3>
                   <p className="text-gray-300">
@@ -28,10 +28,10 @@ const WhyChooseUs = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-4 rounded-lg border border-yellow-400/20 bg-gradient-to-r from-yellow-400/5 to-transparent">
-                <MapPin className="h-8 w-8 text-yellow-400 mt-1 flex-shrink-0" />
+              <div className="flex items-start space-x-4 p-4 rounded-lg border border-gold/20 bg-gradient-to-r from-gold/5 to-transparent">
+                <MapPin className="h-8 w-8 text-gold mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-yellow-400">
+                  <h3 className="text-xl font-semibold mb-2 text-gold">
                     Déplacement à Domicile et au Bureau
                   </h3>
                   <p className="text-gray-300">
@@ -41,10 +41,10 @@ const WhyChooseUs = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4 p-4 rounded-lg border border-yellow-400/20 bg-gradient-to-r from-yellow-400/5 to-transparent">
-                <Sparkles className="h-8 w-8 text-yellow-400 mt-1 flex-shrink-0" />
+              <div className="flex items-start space-x-4 p-4 rounded-lg border border-gold/20 bg-gradient-to-r from-gold/5 to-transparent">
+                <Sparkles className="h-8 w-8 text-gold mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="text-xl font-semibold mb-2 text-yellow-400">
+                  <h3 className="text-xl font-semibold mb-2 text-gold">
                     Produits de Haute Qualité
                   </h3>
                   <p className="text-gray-300">
@@ -56,14 +56,14 @@ const WhyChooseUs = () => {
             </div>
           </div>
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-l from-yellow-400/30 to-yellow-500/20 rounded-2xl blur-3xl"></div>
-            <div className="absolute -inset-4 bg-gradient-to-l from-yellow-400/20 via-transparent to-yellow-400/20 rounded-3xl blur-2xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-l from-gold/30 to-gold/20 rounded-2xl blur-3xl"></div>
+            <div className="absolute -inset-4 bg-gradient-to-l from-gold/20 via-transparent to-gold/20 rounded-3xl blur-2xl"></div>
             <img
-              src="/placeholder.svg?height=400&width=500"
+              src="/images/placeholder.svg?height=400&width=500"
               alt="Professional car cleaning"
               width={500}
               height={400}
-              className="relative z-10 rounded-2xl shadow-2xl border border-yellow-400/30"
+              className="relative z-10 rounded-2xl shadow-2xl border border-gold/30"
             />
           </div>
         </div>

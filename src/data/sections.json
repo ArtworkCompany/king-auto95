@@ -1,0 +1,64 @@
+{
+  "title": "King Auto",
+  "description": "L'excellence du nettoyage automobile, directement chez vous !",
+  "header": {
+    "menu": {
+      "services": "Services",
+      "about": "À propos",
+      "contact": "Contact"
+    }
+  },
+  "hero": {
+    "description": "Service de nettoyage automobile professionnel à domicile. Nous nous déplaçons chez vous pour redonner à votre véhicule tout son éclat.",
+    "button": {
+      "bookNow": "Réserver maintenant",
+      "followUs": "Suivez-nous"
+    }
+  },
+  "services": {
+    "title": "Nos Services",
+    "description": "Des prestations complètes pour redonner à votre véhicule tout son éclat",
+    "services": [
+      {
+        "title": "Nettoyage Intérieur Approfondi",
+        "description": "Aspiration et nettoyage minutieux de l'habitacle pour un intérieur impeccable"
+      },
+      {
+        "title": "Shampoing Sièges et Moquettes",
+        "description": "Nettoyage en profondeur des tissus pour éliminer odeurs et salissures"
+      },
+      {
+        "title": "Détachage Tissus",
+        "description": "Traitement spécialisé pour éliminer les tâches les plus tenaces"
+      },
+      {
+        "title": "Rénovation Plastiques et Cuirs",
+        "description": " Traitement et protection des matériaux pour leur redonner leur aspect d'origine"
+      }
+    ]
+  },
+  "carousel": {
+    "title": "Avant / Après",
+    "description": "Découvrez la transformation spectaculaire de nos véhicules",
+    "slides": [
+      {
+        "title": "Nettoyage Extérieur Complet",
+        "before": "/images/placeholder.svg?height=400&width=600&text=AVANT",
+        "after": "/images/placeholder.svg?height=400&width=600&text=APRÈS",
+        "description": "Transformation complète d'une berline allemande"
+      },
+      {
+        "title": "Rénovation Intérieur Cuir",
+        "before": "/images/placeholder.svg?height=400&width=600&text=AVANT",
+        "after": "/images/placeholder.svg?height=400&width=600&text=APRÈS",
+        "description": "Restauration des sièges en cuir d'un SUV de luxe"
+      },
+      {
+        "title": "Détachage Professionnel",
+        "before": "/images/placeholder.svg?height=400&width=600&text=AVANT",
+        "after": "/images/placeholder.svg?height=400&width=600&text=APRÈS",
+        "description": "Élimination de taches tenaces sur moquettes"
+      }
+    ]
+  }
+}
