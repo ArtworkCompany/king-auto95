@@ -59,7 +59,7 @@ const WhyChooseUs = () => {
             <div className="absolute inset-0 bg-gradient-to-l from-yellow-400/30 to-yellow-500/20 rounded-2xl blur-3xl"></div>
             <div className="absolute -inset-4 bg-gradient-to-l from-yellow-400/20 via-transparent to-yellow-400/20 rounded-3xl blur-2xl"></div>
             <img
-              src="/placeholder.svg?height=400&width=500"
+              src="/king-auto95/placeholder.svg?height=400&width=500"
               alt="Professional car cleaning"
               width={500}
               height={400}
