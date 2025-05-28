@@ -40,25 +40,84 @@
   "carousel": {
     "title": "Avant / Après",
     "description": "Découvrez la transformation spectaculaire de nos véhicules",
+    "before": "AVANT",
+    "after": "APRÈS",
+    "beforeClear": "Avant nettoyage",
+    "afterClear": "Après nettoyage",
     "slides": [
       {
-        "title": "Nettoyage Extérieur Complet",
-        "before": "/images/placeholder.svg?height=400&width=600&text=AVANT",
-        "after": "/images/placeholder.svg?height=400&width=600&text=APRÈS",
-        "description": "Transformation complète d'une berline allemande"
-      },
-      {
-        "title": "Rénovation Intérieur Cuir",
-        "before": "/images/placeholder.svg?height=400&width=600&text=AVANT",
-        "after": "/images/placeholder.svg?height=400&width=600&text=APRÈS",
-        "description": "Restauration des sièges en cuir d'un SUV de luxe"
+        "title": "Nettoyage Intérieur Approfondi",
+        "before": "/images/carousel/before-1.jpeg",
+        "after": "/images/carousel/after-1.jpeg",
+        "description": "Aspiration et nettoyage minutieux de l'habitacle pour un intérieur impeccable"
       },
       {
         "title": "Détachage Professionnel",
-        "before": "/images/placeholder.svg?height=400&width=600&text=AVANT",
-        "after": "/images/placeholder.svg?height=400&width=600&text=APRÈS",
+        "before": "/images/carousel/before-2.jpeg",
+        "after": "/images/carousel/after-2.jpeg",
         "description": "Élimination de taches tenaces sur moquettes"
+      },
+      {
+        "title": "Rénovation Plastiques et Cuirs",
+        "before": "/images/carousel/before-3.jpeg",
+        "after": "/images/carousel/after-3.jpeg",
+        "description": "Traitement et protection des matériaux pour leur redonner leur aspect d'origine"
       }
     ]
+  },
+  "whyChooseUs": {
+    "title": "Pourquoi nous choisir ?",
+    "sections": [
+      {
+        "title": "Service Professionnel",
+        "description": "Équipe expérimentée et formée aux dernières techniques de nettoyage automobile"
+      },
+      {
+        "title": "Déplacement à Domicile et au Bureau",
+        "description": "Nous venons directement chez vous ou sur votre lieu de travail pour votre confort"
+      },
+      {
+        "title": "Produits de Haute Qualité",
+        "description": "Utilisation exclusive de produits professionnels respectueux de votre véhicule"
+      }
+    ]
+  },
+  "testimonials": {
+    "title": "Témoignages Clients",
+    "description": "Découvrez ce que nos clients pensent de nos services",
+    "testimonials": [
+      {
+        "name": "Marie Dubois",
+        "role": "Particulier - Paris",
+        "description": "Service exceptionnel ! Ma voiture n'avait jamais été aussi propre. L'équipe est très professionnelle et ponctuelle.",
+        "sparkles": 4
+      },
+      {
+        "name": "Thomas Martin",
+        "role": "Chef d'entreprise - Cergy",
+        "description": "Incroyable transformation ! Les sièges en cuir de ma BMW sont comme neufs. Je recommande vivement King Auto.",
+        "sparkles": 5
+      },
+      {
+        "name": "Sophie Leroy",
+        "role": "Avocate - Pontoise",
+        "description": "Service à domicile parfait ! Plus besoin de se déplacer, ils viennent directement au bureau. Très pratique !",
+        "sparkles": 4
+      }
+    ]
+  },
+  "callToAction": {
+    "title": "Réservez Votre Service",
+    "description": "Contactez-nous dès maintenant pour redonner à votre véhicule l'éclat qu'il mérite",
+    "callUs": "Appelez-nous",
+    "phoneNumber": "07 81 18 45 50",
+    "followUs": "Suivez-nous",
+    "available7_7": "Disponible 7j/7",
+    "instagram": {
+      "username": "@king_auto_95",
+      "url": "https://www.instagram.com/king_auto_95/"
+    },
+    "lastRealization": "Nos dernières réalisations",
+    "availableService": "Service disponible 7j/7 sur rendez-vous uniquement"
   }
 }
