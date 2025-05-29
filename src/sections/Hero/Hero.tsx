@@ -8,7 +8,7 @@ const Hero = () => {
   const onBookClick = (type: "calendly" | "instagram") => () => {
     if (type === "calendly") return;
 
-    window.open(data.callToAction.instagram.url, "_blank");
+    window.open(data.socialNetwork.instagram.url, "_blank");
   };
 
   return (
