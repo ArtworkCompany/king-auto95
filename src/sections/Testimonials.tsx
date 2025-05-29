@@ -1,9 +1,9 @@
 import { Crown, Sparkles } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
-import data from '../data/sections.json' with { type: "json" };
+import data from "../data/sections.json" with { type: "json" };
 
 const Testimonials = () => {
-  const { testimonials } = data.testimonials
+  const { testimonials } = data.testimonials;
 
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
@@ -22,11 +22,19 @@ const Testimonials = () => {
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          { testimonials.map((testimonial, index) => (
-            <Card key={index} className="transition-all duration-300 bg-black border-2 border-gold/30 hover:border-gold hover:shadow-lg hover:shadow-gold/20">
+          {testimonials.map((testimonial, index) => (
+            <Card
+              key={index}
+              className="transition-all duration-300 bg-black border-2 border-gold/30 hover:border-gold hover:shadow-lg hover:shadow-gold/20"
+            >
               <CardContent className="p-6">
                 <div className="flex mb-4">
-                  {[...Array(testimonial.sparkles)].map((_, i) => ( <Sparkles key={i} className="w-5 h-5 fill-current text-gold" /> ))}
+                  {[...Array(testimonial.sparkles)].map((_, i) => (
+                    <Sparkles
+                      key={i}
+                      className="w-5 h-5 fill-current text-gold"
+                    />
+                  ))}
                 </div>
                 <p className="mb-4 italic text-gray-300">
                   {testimonial.description}

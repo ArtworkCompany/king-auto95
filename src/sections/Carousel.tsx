@@ -1,6 +1,6 @@
 import { ChevronLeft, ChevronRight, Crown } from "lucide-react";
 import React from "react";
-import data from '../data/sections.json' with { type: "json" };
+import data from "../data/sections.json" with { type: "json" };
 
 function BeforeAfterCarousel() {
   const [currentSlide, setCurrentSlide] = React.useState(0);

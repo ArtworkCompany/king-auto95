@@ -1,14 +1,15 @@
-import { SiCalendly, SiInstagram } from '@icons-pack/react-simple-icons';
+import { SiCalendly } from "@icons-pack/react-simple-icons";
 import { Crown } from "lucide-react";
-import { Button } from "../components/ui/button";
-import data from '../data/sections.json' with { type: "json" };
+import { Button } from "../../components/ui/button";
+import data from "../../data/sections.json" with { type: "json" };
+import SocialNetworkButton from "./SocialNetworkButton";
 
 const Hero = () => {
-  const onBookClick = (type: 'calendly' | 'instagram') => () => {
-    if (type === 'calendly') return;
+  const onBookClick = (type: "calendly" | "instagram") => () => {
+    if (type === "calendly") return;
 
-    window.open(data.callToAction.instagram.url, '_blank');
-  }
+    window.open(data.callToAction.instagram.url, "_blank");
+  };
 
   return (
     <section className="relative py-20 overflow-hidden lg:py-32">
@@ -34,26 +35,20 @@ const Hero = () => {
                   {data.description}
                 </p>
               </div>
-              <p className="max-w-lg text-lg text-gray-300">{data.hero.description}</p>
+              <p className="max-w-lg text-lg text-gray-300">
+                {data.hero.description}
+              </p>
             </div>
             <div className="flex flex-col gap-4 sm:flex-row">
               <Button
                 size="lg"
                 className="text-black border-2 border-black cursor-pointer hover:bg-black hover:text-gold bg-gold backdrop-blur"
-                onClick={onBookClick('calendly')}
+                onClick={onBookClick("calendly")}
               >
                 <SiCalendly className="w-5 h-5 mr-2" />
                 {data.hero.button.bookNow}
               </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 cursor-pointer border-gold text-gold hover:bg-gold hover:text-black bg-black/50 backdrop-blur"
-                onClick={onBookClick('instagram')}
-              >
-                <SiInstagram className="w-5 h-5 mr-2" />
-                {data.hero.button.followUs}
-              </Button>
+              <SocialNetworkButton />
             </div>
           </div>
           <div className="relative justify-self-end">

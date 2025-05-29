@@ -1,24 +1,25 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import CallToAction from '../sections/CallToAction';
-import Carousel from '../sections/Carousel';
-import Footer from '../sections/Footer';
-import Header from '../sections/Header';
-import Hero from '../sections/Hero';
-import Services from '../sections/Services';
-import Testimonials from '../sections/Testimonials';
-import WhyChooseUs from '../sections/WhyChooseUs';
+import data from "../data/sections.json" with { type: "json" };
+import Layout from "../layouts/Layout.astro";
+import CallToAction from "../sections/CallToAction";
+import Carousel from "../sections/Carousel";
+import Footer from "../sections/Footer";
+import Header from "../sections/Header";
+import Hero from "../sections/Hero/Hero";
+import Services from "../sections/Services";
+import Testimonials from "../sections/Testimonials";
+import WhyChooseUs from "../sections/WhyChooseUs";
 ---
 
-<Layout>
-	<div class="min-h-screen text-white bg-black">
-		<Header />
-		<Hero client:load />
-		<Services />
-		<Carousel client:load />
-		<WhyChooseUs />
-		<Testimonials />
-		<CallToAction />
-		<Footer />
-	</div>
+<Layout title={data.title}>
+  <div class="min-h-screen text-white bg-black">
+    <Header client:load />
+    <Hero client:load />
+    <Services />
+    <Carousel client:load />
+    <WhyChooseUs />
+    <Testimonials />
+    <CallToAction />
+    <Footer />
+  </div>
 </Layout>

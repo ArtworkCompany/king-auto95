@@ -21,19 +21,23 @@
     "services": [
       {
         "title": "Nettoyage Intérieur Approfondi",
-        "description": "Aspiration et nettoyage minutieux de l'habitacle pour un intérieur impeccable"
+        "description": "Aspiration et nettoyage minutieux de l'habitacle pour un intérieur impeccable",
+        "icon": "sparkles"
       },
       {
         "title": "Shampoing Sièges et Moquettes",
-        "description": "Nettoyage en profondeur des tissus pour éliminer odeurs et salissures"
+        "description": "Nettoyage en profondeur des tissus pour éliminer odeurs et salissures",
+        "icon": "droplets"
       },
       {
         "title": "Détachage Tissus",
-        "description": "Traitement spécialisé pour éliminer les tâches les plus tenaces"
+        "description": "Traitement spécialisé pour éliminer les tâches les plus tenaces",
+        "icon": "stethoscope"
       },
       {
         "title": "Rénovation Plastiques et Cuirs",
-        "description": " Traitement et protection des matériaux pour leur redonner leur aspect d'origine"
+        "description": " Traitement et protection des matériaux pour leur redonner leur aspect d'origine",
+        "icon": "shield"
       }
     ]
   },
@@ -119,5 +123,28 @@
     },
     "lastRealization": "Nos dernières réalisations",
     "availableService": "Service disponible 7j/7 sur rendez-vous uniquement"
+  },
+  "footer": {
+    "followUs": "Suivez-nous",
+    "contactUs": "Contact",
+    "book": "7/7 sur rendez-vous",
+    "copyright": "Tous droits réservés."
+  },
+  "socialNetwork": {
+    "instagram": {
+      "title": "Instagram",
+      "username": "@king_auto_95",
+      "url": "https://www.instagram.com/king_auto_95/"
+    },
+    "snapchat": {
+      "title": "Snapchat",
+      "username": "@king_auto95",
+      "url": "https://www.snapchat.com/add/king_auto95"
+    },
+    "tiktok": {
+      "title": "TikTok",
+      "username": "@king_auto95",
+      "url": "https://www.tiktok.com/@king_auto95"
+    }
   }
 }

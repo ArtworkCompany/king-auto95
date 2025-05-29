@@ -1,7 +1,6 @@
-import { SiInstagram } from '@icons-pack/react-simple-icons';
 import { Clock, Crown, Phone } from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
-import data from '../data/sections.json' with { type: "json" };
+import data from "../data/sections.json" with { type: "json" };
 
 const CallToAction = () => {
   return (
@@ -25,7 +24,26 @@ const CallToAction = () => {
             {data.callToAction.description}
           </p>
 
-          <div className="grid gap-8 mb-12 md:grid-cols-2">
+          <div className="mb-12">
+            <Card className="bg-black border-2 shadow-lg border-gold shadow-gold/20">
+              <CardContent className="p-8 text-center">
+                <Phone className="w-12 h-12 mx-auto mb-4 text-gold" />
+                <h3 className="mb-4 text-2xl font-semibold text-gold">
+                  {data.callToAction.callUs}
+                </h3>
+                <a
+                  href="tel:+33781184550"
+                  className="text-3xl font-bold text-gold drop-shadow-lg"
+                >
+                  {data.callToAction.phoneNumber}
+                </a>
+                <p className="mt-4 text-gray-300">
+                  {data.callToAction.available7_7}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+          {/* <div className="grid gap-8 mb-12 md:grid-cols-2">
             <Card className="bg-black border-2 shadow-lg border-gold shadow-gold/20">
               <CardContent className="p-8 text-center">
                 <Phone className="w-12 h-12 mx-auto mb-4 text-gold" />
@@ -51,7 +69,7 @@ const CallToAction = () => {
                 <p className="mt-4 text-gray-300">{data.callToAction.lastRealization}</p>
               </CardContent>
             </Card>
-          </div>
+          </div> */}
 
           <div className="inline-block p-6 text-black shadow-lg bg-gradient-to-r from-gold to-gold rounded-2xl shadow-gold/30">
             <div className="flex items-center justify-center space-x-2">

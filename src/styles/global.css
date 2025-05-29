@@ -4,7 +4,3 @@
   --font-sans: "Exo 2", "sans-serif";
   --color-gold: #c19d47;
 }
-
-html {
-  scroll-behavior: smooth;
-}

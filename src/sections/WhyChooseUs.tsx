@@ -1,5 +1,5 @@
 import { Award, Crown } from "lucide-react";
-import data from '../data/sections.json' with { type: "json" };
+import data from "../data/sections.json" with { type: "json" };
 
 const WhyChooseUs = () => {
   return (
@@ -17,7 +17,10 @@ const WhyChooseUs = () => {
             </h2>
             <div className="space-y-6">
               {data.whyChooseUs.sections.map((section, index) => (
-                <div key={index} className="flex items-start p-4 space-x-4 border rounded-lg border-gold/20 bg-gradient-to-r from-gold/5 to-transparent">
+                <div
+                  key={index}
+                  className="flex items-start p-4 space-x-4 border rounded-lg border-gold/20 bg-gradient-to-r from-gold/5 to-transparent"
+                >
                   <Award className="flex-shrink-0 w-8 h-8 mt-1 text-gold" />
                   <div>
                     <h3 className="mb-2 text-xl font-semibold text-gold">

@@ -1,19 +1,27 @@
 ---
-import data from '../data/sections.json' with { type: "json" };
+import data from "../data/sections.json" with { type: "json" };
 import "../styles/global.css";
+
+const { title } = Astro.props;
 ---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@400;600;700&display=swap" rel="stylesheet">
-		<meta name="generator" content={Astro.generator} />
-		<title>{data.title}</title>
-		<meta name="description" content={data.description} />
-	</head>
-	<body class="font-sans">
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={data.description} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={data.description} />
+  </head>
+  <body class="font-sans">
+    <slot />
+  </body>
 </html>
