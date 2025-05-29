@@ -34,7 +34,7 @@ const SocialNetworkButton = () => {
       <Button
         size="lg"
         variant="outline"
-        className="border-2 cursor-pointer border-gold text-gold hover:bg-gold hover:text-black bg-black/50 backdrop-blur group"
+        className="w-full border-2 cursor-pointer border-gold text-gold hover:bg-gold hover:text-black bg-black/50 backdrop-blur group"
         onClick={() => setShowSocialDropdown(!showSocialDropdown)}
       >
         <SiLinktree className="w-5 h-5 mr-2" />
@@ -44,7 +44,7 @@ const SocialNetworkButton = () => {
         />
       </Button>
       {showSocialDropdown && (
-        <div className="absolute z-10 w-full mt-2 bg-black border-2 rounded-lg shadow-lg top-full border-gold/30 shadow-gold/20 backdrop-blur">
+        <div className="absolute z-20 w-full mt-2 bg-black border-2 rounded-lg shadow-lg top-full border-gold/30 shadow-gold/20 backdrop-blur">
           <div
             className="flex items-center w-full gap-2 px-4 py-3 text-gray-300 transition-colors rounded-md cursor-pointer hover:text-gold hover:bg-gold/15"
             onClick={onSelectSocialNetwork(data.socialNetwork.instagram.url)}

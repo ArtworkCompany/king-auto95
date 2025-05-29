@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 border-b border-gold/30 bg-black/95 backdrop-blur supports-[backdrop-filter]:bg-black/60">
       <div className="container flex items-center justify-between h-32 px-4 mx-auto lg:px-6">
-        <div className="flex items-center space-x-2">
+        <a href="/" className="flex items-center space-x-2">
           <img
             src="/images/logo-header.png"
             alt={data.title}
@@ -27,7 +27,7 @@ const Header = () => {
             height={100}
           />
           <span className="text-2xl text-gold">{data.title}</span>
-        </div>
+        </a>
         <nav className="items-center hidden space-x-6 text-2xl md:flex">
           <a
             href="#"
