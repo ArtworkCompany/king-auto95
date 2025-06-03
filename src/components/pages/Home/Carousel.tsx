@@ -41,15 +41,6 @@ function BeforeAfterCarousel() {
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
-  // const prevSlide = () => {
-  //   if (isTransitioning) return;
-
-  //   setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  //   startAutoSlide();
-  //   setIsTransitioning(true);
-  //   setTimeout(() => setIsTransitioning(false), 500);
-  // };
-
   useEffect(() => {
     startAutoSlide();
 
@@ -69,35 +60,6 @@ function BeforeAfterCarousel() {
     return () => {
       container.removeEventListener("touchend", handleTouch);
     };
-
-    // const handleWheel = (e: WheelEvent) => {
-    //   e.preventDefault();
-    //   if (e.deltaY > 0) nextSlide();
-    //   else prevSlide();
-    // };
-
-    // const handleTouchStart = (e: TouchEvent) => {
-    //   touchStartX.current = e.touches[0].clientX;
-    // };
-
-    // const handleTouchEnd = (e: TouchEvent) => {
-    //   if (touchStartX.current === null) return;
-    //   const deltaX = e.changedTouches[0].clientX - touchStartX.current;
-    //   if (Math.abs(deltaX) > 50) {
-    //     deltaX < 0 ? nextSlide() : prevSlide();
-    //   }
-    //   touchStartX.current = null;
-    // };
-
-    // container.addEventListener("wheel", handleWheel, { passive: false });
-    // container.addEventListener("touchstart", handleTouchStart);
-    // container.addEventListener("touchend", handleTouchEnd);
-
-    // return () => {
-    //   container.removeEventListener("wheel", handleWheel);
-    //   container.removeEventListener("touchstart", handleTouchStart);
-    //   container.removeEventListener("touchend", handleTouchEnd);
-    // };
   }, []);
 
   return (
@@ -107,13 +69,6 @@ function BeforeAfterCarousel() {
         className="relative overflow-hidden border-2 shadow-lg rounded-2xl border-secondary/30 bg-gradient-to-br from-blue-800/60 via-indigo-800/50 to-blue-900/60 backdrop-blur cursor-grab active:cursor-grabbing"
       >
         <div className="p-8">
-          {/* <div className="mb-8 text-center">
-            <h3 className="mb-2 text-2xl font-bold transition-all duration-500 text-secondary">
-              {slides[currentSlide].title}
-            </h3>
-            <p className="text-white">{slides[currentSlide].description}</p>
-          </div> */}
-
           <div className="grid gap-8 md:grid-cols-2">
             <div className="relative group">
               <div className="absolute -inset-2 bg-gradient-to-r from-red-400/20 to-red-500/20 rounded-xl blur-lg"></div>
@@ -124,7 +79,7 @@ function BeforeAfterCarousel() {
                 <img
                   src={slides[currentSlide].before}
                   alt={home.carousel.beforeClear}
-                  className="w-full h-[700px] object-cover rounded-xl border border-red-400/50 shadow-md transition-all duration-500"
+                  className="w-full h-[300px] lg:h-[700px] object-cover rounded-xl border border-red-400/50 shadow-md transition-all duration-500"
                 />
               </div>
             </div>
@@ -138,30 +93,13 @@ function BeforeAfterCarousel() {
                 <img
                   src={slides[currentSlide].after}
                   alt={home.carousel.afterClear}
-                  className="w-full h-[700px] object-cover rounded-xl border border-secondary/50 shadow-md transition-all duration-500"
+                  className="w-full h-[300px] lg:h-[700px] object-cover rounded-xl border border-secondary/50 shadow-md transition-all duration-500"
                 />
               </div>
             </div>
           </div>
         </div>
       </div>
-
-      {/* Navigation Arrows */}
-      {/* <button
-        onClick={prevSlide}
-        className="absolute p-3 transition-all duration-300 -translate-y-1/2 border-2 rounded-full text-secondary border-secondary left-4 top-1/2 bg-black/80 hover:bg-secondary hover:text-black backdrop-blur"
-      >
-        <ChevronLeft className="w-6 h-6" />
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute p-3 transition-all duration-300 -translate-y-1/2 border-2 rounded-full text-secondary border-secondary right-4 top-1/2 bg-black/80 hover:bg-secondary hover:text-black backdrop-blur"
-      >
-        <ChevronRight className="w-6 h-6" />
-      </button> */}
-
-      {/* Slide Indicators */}
       <div className="flex justify-center mt-8 space-x-2">
         {slides.map((_, index) => (
           <button
