@@ -4,7 +4,6 @@ import {
   ChevronRight,
   CircleCheck,
   HelpCircle,
-  Link,
   Sofa,
   Truck,
 } from "lucide-react";
@@ -34,6 +33,8 @@ type VehicleType =
 const Reservation = () => {
   const [currentStep, setCurrentStep] = useState<ReservationStep>(1);
   const [selectedVehicle, setSelectedVehicle] = useState<VehicleType>(null);
+  const [licensePlate, setLicensePlate] = useState("");
+  const [isDetecting, setIsDetecting] = useState(false);
 
   const handleVehicleSelect = (vehicle: VehicleType) => {
     setSelectedVehicle(vehicle);
@@ -44,6 +45,41 @@ const Reservation = () => {
     if (currentStep < 5) {
       setCurrentStep((prev) => (prev + 1) as ReservationStep);
     }
+  };
+
+  const detectVehicleType = async (plate: string) => {
+    if (!plate || plate.length < 4) return;
+
+    setIsDetecting(true);
+
+    // Simulation d'une API de détection (remplacer par une vraie API)
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+
+    // Simulation basée sur des patterns de plaques
+    const plateUpper = plate.toUpperCase();
+    let detectedType: VehicleType = null;
+
+    // Simulation de détection basée sur des patterns fictifs
+    if (plateUpper.includes("AA") || plateUpper.includes("AB")) {
+      detectedType = "citadine";
+    } else if (plateUpper.includes("AC") || plateUpper.includes("AD")) {
+      detectedType = "berline";
+    } else if (plateUpper.includes("AE") || plateUpper.includes("AF")) {
+      detectedType = "suv";
+    } else if (plateUpper.includes("AG") || plateUpper.includes("AH")) {
+      detectedType = "monospace5";
+    } else if (plateUpper.includes("AI") || plateUpper.includes("AJ")) {
+      detectedType = "monospace7";
+    } else if (plateUpper.includes("UT") || plateUpper.includes("VU")) {
+      detectedType = "utilitaire";
+    } else {
+      // Détection aléatoire pour les autres cas
+      const types: VehicleType[] = ["citadine", "berline", "suv", "monospace5"];
+      detectedType = types[Math.floor(Math.random() * types.length)];
+    }
+
+    setSelectedVehicle(detectedType);
+    setIsDetecting(false);
   };
 
   return (
@@ -91,15 +127,73 @@ const Reservation = () => {
           {currentStep === 1 && (
             <div className="max-w-5xl mx-auto">
               <div className="mb-10 text-center">
-                <h1 className="mb-4 text-3xl font-bold text-white md:text-4xl">
+                <h1 className="mb-8 text-3xl font-bold text-white md:text-4xl">
                   Que veux-tu laver ?
                 </h1>
-                <p className="text-white/80">
-                  Un doute sur ton type de véhicule ?{" "}
-                  <Link href="/faq" className="text-cyan-300 hover:underline">
-                    regarde ici
-                  </Link>
-                </p>
+                <div className="max-w-md mx-auto mb-10">
+                  <div className="p-6 border-2 shadow-lg bg-gradient-to-br from-blue-800/80 via-indigo-800/60 to-blue-900/80 border-cyan-300/30 rounded-xl">
+                    <h3 className="mb-4 text-lg font-semibold text-center text-white">
+                      Détection automatique par plaque
+                    </h3>
+                    <div className="space-y-4">
+                      <div>
+                        <label
+                          htmlFor="licensePlate"
+                          className="block mb-2 text-sm font-medium text-white"
+                        >
+                          Plaque d'immatriculation
+                        </label>
+                        <input
+                          type="text"
+                          id="licensePlate"
+                          value={licensePlate}
+                          onChange={(e) =>
+                            setLicensePlate(e.target.value.toUpperCase())
+                          }
+                          placeholder="Ex: AB-123-CD"
+                          className="w-full px-4 py-3 text-white transition-all duration-300 border rounded-lg bg-blue-900/50 border-cyan-300/30 placeholder-white/50 focus:outline-none focus:border-cyan-300 focus:ring-2 focus:ring-cyan-300/20"
+                          maxLength={10}
+                        />
+                      </div>
+                      <button
+                        onClick={() => detectVehicleType(licensePlate)}
+                        disabled={
+                          !licensePlate ||
+                          licensePlate.length < 4 ||
+                          isDetecting
+                        }
+                        className={`w-full py-3 rounded-lg font-semibold transition-all duration-300 ${
+                          licensePlate &&
+                          licensePlate.length >= 4 &&
+                          !isDetecting
+                            ? "bg-gradient-to-r from-cyan-400 to-cyan-500 hover:from-cyan-500 hover:to-cyan-600 text-blue-900 shadow-lg shadow-cyan-400/25"
+                            : "bg-blue-800/50 text-white/50 cursor-not-allowed"
+                        }`}
+                      >
+                        {isDetecting ? (
+                          <div className="flex items-center justify-center space-x-2">
+                            <div className="w-4 h-4 border-2 rounded-full border-white/30 border-t-white animate-spin"></div>
+                            <span>Détection en cours...</span>
+                          </div>
+                        ) : (
+                          "Détecter mon véhicule"
+                        )}
+                      </button>
+                    </div>
+                    {selectedVehicle && licensePlate && (
+                      <div className="p-3 mt-4 border rounded-lg bg-cyan-300/10 border-cyan-300/30">
+                        <p className="text-sm text-center text-cyan-300">
+                          ✓ Véhicule détecté ! Sélection automatique effectuée.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                </div>
+                <div className="mb-6 text-center">
+                  <p className="text-sm text-white/60">
+                    ou sélectionnez manuellement votre type de véhicule
+                  </p>
+                </div>
               </div>
 
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
