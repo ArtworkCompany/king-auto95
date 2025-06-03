@@ -43,7 +43,7 @@ const SocialNetworkButton = () => {
         )}
         onClick={() => setShowSocialDropdown(!showSocialDropdown)}
       >
-        <SiLinktree className="w-5 h-5 mr-2" />
+        <SiLinktree className="w-5 h-5 mr-2 text-secondary" />
         {home.hero.button.followUs}
         <ChevronDown
           className={cn(`ml-2 h-4 w-4 transition-transform duration-200`, {
@@ -57,7 +57,7 @@ const SocialNetworkButton = () => {
             className="flex items-center w-full gap-2 px-4 py-3 transition-colors rounded-md cursor-pointer text-secondary hover:bg-cyan-300/10"
             onClick={onSelectSocialNetwork(home.socialNetwork.instagram.url)}
           >
-            <SiInstagram className="w-5 h-5 mr-2 text-secondary" />
+            <SiInstagram className="w-5 h-5 mr-2" color="#E1306C" />
             <div>
               <div className="font-semibold">
                 {home.socialNetwork.instagram.title}
@@ -71,7 +71,7 @@ const SocialNetworkButton = () => {
             className="flex items-center w-full gap-2 px-4 py-3 transition-colors rounded-md cursor-pointer text-secondary hover:bg-cyan-300/10"
             onClick={onSelectSocialNetwork(home.socialNetwork.snapchat.url)}
           >
-            <SiSnapchat className="w-5 h-5 mr-2 text-secondary" />
+            <SiSnapchat className="w-5 h-5 mr-2" color="#FFFC00" />
             <div>
               <div className="font-semibold">
                 {home.socialNetwork.snapchat.title}
@@ -85,7 +85,7 @@ const SocialNetworkButton = () => {
             className="flex items-center w-full gap-2 px-4 py-3 transition-colors rounded-md cursor-pointer text-secondary hover:bg-cyan-300/10"
             onClick={onSelectSocialNetwork(home.socialNetwork.tiktok.url)}
           >
-            <SiTiktok className="w-5 h-5 mr-2 text-secondary" />
+            <SiTiktok className="w-5 h-5 mr-2" color="#000000" />
             <div>
               <div className="font-semibold">
                 {home.socialNetwork.tiktok.title}
