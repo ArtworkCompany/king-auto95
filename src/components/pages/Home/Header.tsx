@@ -98,36 +98,40 @@ const Header = ({ isHome }: Props) => {
       {showMobileMenu && (
         <div className="border-t md:hidden bg-blue-900/98 backdrop-blur border-cyan-300/30">
           <nav className="container px-4 py-4 mx-auto space-y-4">
-            <a
-              href="#"
-              className="block py-2 text-white transition-colors border-b hover:text-cyan-300 border-cyan-300/20"
-              onClick={(e) => {
-                setShowMobileMenu(false);
-                handleScroll("services")(e);
-              }}
-            >
-              {home.header.menu.services}
-            </a>
-            <a
-              href="#"
-              className="block py-2 text-white transition-colors border-b hover:text-cyan-300 border-cyan-300/20"
-              onClick={(e) => {
-                setShowMobileMenu(false);
-                handleScroll("about")(e);
-              }}
-            >
-              {home.header.menu.about}
-            </a>
-            <a
-              href="#"
-              className="block py-2 text-white transition-colors border-b hover:text-cyan-300 border-cyan-300/20"
-              onClick={(e) => {
-                setShowMobileMenu(false);
-                handleScroll("contact")(e);
-              }}
-            >
-              {home.header.menu.contact}
-            </a>
+            {isHome && (
+              <>
+                <a
+                  href="#"
+                  className="block py-2 text-white transition-colors border-b hover:text-cyan-300 border-cyan-300/20"
+                  onClick={(e) => {
+                    setShowMobileMenu(false);
+                    handleScroll("services")(e);
+                  }}
+                >
+                  {home.header.menu.services}
+                </a>
+                <a
+                  href="#"
+                  className="block py-2 text-white transition-colors border-b hover:text-cyan-300 border-cyan-300/20"
+                  onClick={(e) => {
+                    setShowMobileMenu(false);
+                    handleScroll("about")(e);
+                  }}
+                >
+                  {home.header.menu.about}
+                </a>
+                <a
+                  href="#"
+                  className="block py-2 text-white transition-colors border-b hover:text-cyan-300 border-cyan-300/20"
+                  onClick={(e) => {
+                    setShowMobileMenu(false);
+                    handleScroll("contact")(e);
+                  }}
+                >
+                  {home.header.menu.contact}
+                </a>
+              </>
+            )}
             <a
               href="/faq"
               className="block py-2 text-white transition-colors hover:text-cyan-300"

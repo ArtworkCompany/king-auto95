@@ -57,10 +57,9 @@ const Hero = () => {
             <div className="absolute inset-0 bg-gradient-to-r from-secondary/30 to-secondary/20 rounded-2xl blur-3xl"></div>
             <div className="absolute -inset-4 bg-gradient-to-r from-secondary/20 via-transparent to-secondary/20 rounded-3xl blur-2xl"></div>
             <img
-              src="/images/presentation.png"
+              src="/images/presentation-v3.jpeg"
               alt={home.title}
-              width={600}
-              height={500}
+              width={300}
               className="relative z-10 border shadow-2xl rounded-2xl border-secondary/20"
             />
           </div>
