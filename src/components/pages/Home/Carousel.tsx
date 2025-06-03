@@ -1,11 +1,13 @@
 import { Crown } from "lucide-react";
-import React from "react";
+import React, { useEffect } from "react";
 import home from "../../../data/home.json" with { type: "json" };
 import { cn } from "../../../lib/utils";
 
 function BeforeAfterCarousel() {
   const [currentSlide, setCurrentSlide] = React.useState(0);
   const { slides } = home.carousel;
+  const carouselRef = React.useRef<HTMLDivElement>(null);
+  const touchStartX = React.useRef<number | null>(null);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % slides.length);
@@ -15,9 +17,55 @@ function BeforeAfterCarousel() {
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, [slides.length]);
+
+  useEffect(() => {
+    const handleWheel = (e: WheelEvent) => {
+      if (e.deltaY > 0) nextSlide();
+      else prevSlide();
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = (e: TouchEvent) => {
+      if (touchStartX.current === null) return;
+      const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+      if (Math.abs(deltaX) > 50) {
+        deltaX < 0 ? nextSlide() : prevSlide();
+      }
+      touchStartX.current = null;
+    };
+
+    const container = carouselRef.current;
+    if (container) {
+      container.addEventListener("wheel", handleWheel);
+      container.addEventListener("touchstart", handleTouchStart);
+      container.addEventListener("touchend", handleTouchEnd);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener("wheel", handleWheel);
+        container.removeEventListener("touchstart", handleTouchStart);
+        container.removeEventListener("touchend", handleTouchEnd);
+      }
+    };
+  }, [slides.length]);
+
   return (
     <div className="relative max-w-6xl mx-auto">
-      <div className="relative overflow-hidden border-2 shadow-lg rounded-2xl border-secondary/30 bg-gradient-to-br from-blue-800/60 via-indigo-800/50 to-blue-900/60 backdrop-blur cursor-grab active:cursor-grabbing">
+      <div
+        ref={carouselRef}
+        className="relative overflow-hidden border-2 shadow-lg rounded-2xl border-secondary/30 bg-gradient-to-br from-blue-800/60 via-indigo-800/50 to-blue-900/60 backdrop-blur cursor-grab active:cursor-grabbing"
+      >
         <div className="p-8">
           <div className="mb-8 text-center">
             <h3 className="mb-2 text-2xl font-bold transition-all duration-500 text-secondary">
