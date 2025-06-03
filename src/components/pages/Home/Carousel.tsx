@@ -16,7 +16,7 @@ function BeforeAfterCarousel() {
     stopAutoSlide();
     intervalRef.current = setInterval(() => {
       nextSlide(false); // auto slide, pas de reset
-    }, 5000);
+    }, 3500);
   };
 
   const stopAutoSlide = () => {
@@ -41,14 +41,14 @@ function BeforeAfterCarousel() {
     setTimeout(() => setIsTransitioning(false), 500);
   };
 
-  const prevSlide = () => {
-    if (isTransitioning) return;
+  // const prevSlide = () => {
+  //   if (isTransitioning) return;
 
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-    startAutoSlide();
-    setIsTransitioning(true);
-    setTimeout(() => setIsTransitioning(false), 500);
-  };
+  //   setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  //   startAutoSlide();
+  //   setIsTransitioning(true);
+  //   setTimeout(() => setIsTransitioning(false), 500);
+  // };
 
   useEffect(() => {
     startAutoSlide();
@@ -60,34 +60,44 @@ function BeforeAfterCarousel() {
     const container = carouselRef.current;
     if (!container) return;
 
-    const handleWheel = (e: WheelEvent) => {
-      e.preventDefault();
-      if (e.deltaY > 0) nextSlide();
-      else prevSlide();
+    const handleTouch = (e: TouchEvent) => {
+      nextSlide();
     };
 
-    const handleTouchStart = (e: TouchEvent) => {
-      touchStartX.current = e.touches[0].clientX;
-    };
-
-    const handleTouchEnd = (e: TouchEvent) => {
-      if (touchStartX.current === null) return;
-      const deltaX = e.changedTouches[0].clientX - touchStartX.current;
-      if (Math.abs(deltaX) > 50) {
-        deltaX < 0 ? nextSlide() : prevSlide();
-      }
-      touchStartX.current = null;
-    };
-
-    container.addEventListener("wheel", handleWheel, { passive: false });
-    container.addEventListener("touchstart", handleTouchStart);
-    container.addEventListener("touchend", handleTouchEnd);
+    container.addEventListener("touchend", handleTouch);
 
     return () => {
-      container.removeEventListener("wheel", handleWheel);
-      container.removeEventListener("touchstart", handleTouchStart);
-      container.removeEventListener("touchend", handleTouchEnd);
+      container.removeEventListener("touchend", handleTouch);
     };
+
+    // const handleWheel = (e: WheelEvent) => {
+    //   e.preventDefault();
+    //   if (e.deltaY > 0) nextSlide();
+    //   else prevSlide();
+    // };
+
+    // const handleTouchStart = (e: TouchEvent) => {
+    //   touchStartX.current = e.touches[0].clientX;
+    // };
+
+    // const handleTouchEnd = (e: TouchEvent) => {
+    //   if (touchStartX.current === null) return;
+    //   const deltaX = e.changedTouches[0].clientX - touchStartX.current;
+    //   if (Math.abs(deltaX) > 50) {
+    //     deltaX < 0 ? nextSlide() : prevSlide();
+    //   }
+    //   touchStartX.current = null;
+    // };
+
+    // container.addEventListener("wheel", handleWheel, { passive: false });
+    // container.addEventListener("touchstart", handleTouchStart);
+    // container.addEventListener("touchend", handleTouchEnd);
+
+    // return () => {
+    //   container.removeEventListener("wheel", handleWheel);
+    //   container.removeEventListener("touchstart", handleTouchStart);
+    //   container.removeEventListener("touchend", handleTouchEnd);
+    // };
   }, []);
 
   return (
