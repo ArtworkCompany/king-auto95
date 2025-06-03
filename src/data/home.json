@@ -5,7 +5,9 @@
     "menu": {
       "services": "Services",
       "about": "À propos",
-      "contact": "Contact"
+      "contact": "Contact",
+      "faq": "F.A.Q",
+      "reservation": "Réservation"
     }
   },
   "hero": {

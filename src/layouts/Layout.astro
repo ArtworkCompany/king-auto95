@@ -1,5 +1,5 @@
 ---
-import data from "../data/sections.json" with { type: "json" };
+import home from "../data/home.json" with { type: "json" };
 import "../styles/global.css";
 
 const { title } = Astro.props;
@@ -17,9 +17,9 @@ const { title } = Astro.props;
     />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <meta name="description" content={data.description} />
+    <meta name="description" content={home.description} />
     <meta property="og:title" content={title} />
-    <meta property="og:description" content={data.description} />
+    <meta property="og:description" content={home.description} />
   </head>
   <body class="font-sans">
     <slot />

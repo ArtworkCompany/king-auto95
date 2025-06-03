@@ -1,0 +1,49 @@
+{
+  "title": "F.A.Q",
+  "questions": [
+    {
+      "question": "Quels services de nettoyage proposez-vous ?",
+      "answer": "<p>Nous proposons une gamme complète de services de nettoyage automobile :</p><ul className='pl-6 mt-2 space-y-1 list-disc'><li>Nettoyage extérieur complet (carrosserie, jantes, vitres)</li><li>Nettoyage intérieur approfondi</li><li>Shampoing des sièges et moquettes</li><li>Détachage des tissus</li><li>Rénovation des plastiques et cuirs</li><li>Traitement céramique et protection</li><li>Polissage et correction des défauts de peinture</li></ul>"
+    },
+    {
+      "question": "Comment fonctionne votre service à domicile ?",
+      "answer": "Notre équipe se déplace directement chez vous ou sur votre lieu de travail avec tout l'équipement nécessaire. Nous avons besoin uniquement d'un accès à votre véhicule et à une source d'eau. Nous nous occupons du reste ! Notre système autonome nous permet d'intervenir même en appartement ou en parking souterrain."
+    },
+    {
+      "question": "Quels sont vos tarifs ?",
+      "answer": "<p>Nos tarifs varient selon le type de véhicule et les services demandés :</p><ul className='pl-6 mt-2 space-y-1 list-disc'><li>Formule Essentielle (extérieur) : à partir de 60€</li><li>Formule Complète (extérieur + intérieur) : à partir de 120€</li><li>Formule Premium (complète + traitement) : à partir de 180€</li><li>Services spécifiques (détachage, rénovation) : sur devis</li></ul><p className='mt-2'>Contactez-nous pour obtenir un devis personnalisé adapté à votre véhicule et vos besoins spécifiques.</p>"
+    },
+    {
+      "question": "Combien de temps dure une prestation ?",
+      "answer": "La durée varie selon le service choisi et l'état initial du véhicule. Un nettoyage extérieur prend environ 1h30, un nettoyage complet entre 3h et 4h, et une formule premium peut prendre jusqu'à 6h pour un résultat optimal. Nous vous communiquons une estimation précise lors de la prise de rendez-vous."
+    },
+    {
+      "question": "Quelles zones géographiques couvrez-vous ?",
+      "answer": "Nous intervenons principalement dans le Val d'Oise (95) et les départements limitrophes (92, 78, 60, 93, 95). Pour les autres zones, un supplément de déplacement peut s'appliquer. N'hésitez pas à nous contacter pour vérifier notre disponibilité dans votre secteur."
+    },
+    {
+      "question": "Quels types de véhicules prenez-vous en charge ?",
+      "answer": "Nous prenons en charge tous types de véhicules : citadines, berlines, SUV, 4x4, utilitaires, vans, camping-cars et même certains véhicules de prestige. Les tarifs varient selon la taille et le type de véhicule."
+    },
+    {
+      "question": "Quels produits utilisez-vous ?",
+      "answer": "Nous utilisons exclusivement des produits professionnels haut de gamme, respectueux de l'environnement et sans danger pour votre véhicule. Notre gamme comprend des produits spécifiques pour chaque surface (cuir, tissu, plastique, peinture) afin de garantir un résultat optimal tout en préservant les matériaux."
+    },
+    {
+      "question": "Comment réserver une prestation ?",
+      "answer": "<p>Vous pouvez réserver une prestation de plusieurs façons :</p><ul className='pl-6 mt-2 space-y-1 list-disc'><li>Par téléphone au 07 81 18 45 50</li><li>Par message sur Instagram @King_auto_95</li><li>Par message sur Snapchat @kingauto95</li><li>Par message sur TikTok @kingauto95</li></ul><p className='mt-2'>Nous vous répondrons dans les plus brefs délais pour confirmer votre rendez-vous et vous communiquer toutes les informations nécessaires.</p>"
+    },
+    {
+      "question": "Proposez-vous des formules d'abonnement ?",
+      "answer": "Oui, nous proposons des formules d'abonnement mensuelles ou trimestrielles pour les clients réguliers. Ces formules vous permettent de bénéficier de tarifs préférentiels et d'une priorité dans la prise de rendez-vous. Contactez-nous pour plus d'informations sur nos offres d'abonnement."
+    },
+    {
+      "question": "Quels moyens de paiement acceptez-vous ?",
+      "answer": "Nous acceptons les paiements en espèces, par carte bancaire, par virement bancaire et via les applications mobiles de paiement (Lydia, Paylib). Le règlement s'effectue à la fin de la prestation, une fois que vous avez constaté le résultat."
+    },
+    {
+      "question": "Que faire en cas d'intempéries ?",
+      "answer": "En cas de conditions météorologiques défavorables (forte pluie, neige, gel), nous pouvons être amenés à reporter votre rendez-vous. Dans ce cas, nous vous contactons au plus tôt pour vous proposer une nouvelle date. Pour les prestations intérieures uniquement, nous pouvons maintenir le rendez-vous si vous disposez d'un espace couvert."
+    }
+  ]
+}

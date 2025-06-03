@@ -1,7 +1,7 @@
 import { Crown, Droplets, Shield, Sparkles, Stethoscope } from "lucide-react";
-import { Card, CardContent } from "../components/ui/card";
-import data from "../data/sections.json" with { type: "json" };
-import { cn } from "../lib/utils";
+import home from "../../../data/home.json" with { type: "json" };
+import { cn } from "../../../lib/utils";
+import { Card, CardContent } from "../../ui/card";
 
 type IconType = "sparkles" | "droplets" | "stethoscope" | "shield";
 
@@ -16,45 +16,45 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-20 bg-gradient-to-b from-black to-gray-900"
+      className="py-20 bg-gradient-to-br from-blue-900 via-indigo-800 to-blue-800"
     >
       <div className="container px-4 mx-auto lg:px-6">
         <div className="mb-16 text-center">
           <div className="inline-flex items-center mb-4 space-x-2">
-            <div className="w-12 h-1 bg-gold"></div>
-            <Crown className="w-8 h-8 text-gold" />
-            <div className="w-12 h-1 bg-gold"></div>
+            <div className="w-12 h-1 bg-secondary"></div>
+            <Crown className="w-8 h-8 text-secondary" />
+            <div className="w-12 h-1 bg-secondary"></div>
           </div>
-          <h2 className="mb-4 text-4xl font-bold text-transparent lg:text-5xl bg-gradient-to-r from-white via-gold to-white bg-clip-text">
-            {data.services.title}
+          <h2 className="mb-4 text-4xl font-bold text-secondary lg:text-5xl bg-clip-text">
+            {home.services.title}
           </h2>
           <p className="max-w-2xl mx-auto text-xl text-gray-300">
-            {data.services.description}
+            {home.services.description}
           </p>
         </div>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {data.services.services.map((service, index) => {
+          {home.services.services.map((service, index) => {
             const Icon = icons[service.icon as IconType];
 
             return (
               <Card
                 className={cn(
-                  "bg-black border-2 border-gold/30 hover:border-gold transition-all duration-300 hover:shadow-lg hover:shadow-gold/20 group",
+                  "bg-gradient-to-br from-blue-800/80 via-indigo-800/60 to-blue-900/80 border-2 border-cyan-300/30 hover:border-cyan-300 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-300/20 group",
                   {
                     "lg:col-span-3 md:col-span-3":
-                      index === data.services.services.length - 1,
+                      index === home.services.services.length - 1,
                   },
                 )}
                 key={index}
               >
                 <CardContent className="p-6 text-center">
                   <div className="relative mb-4">
-                    <Icon className="w-12 h-12 mx-auto transition-transform duration-300 text-gold group-hover:scale-110" />
-                    <div className="absolute inset-0 w-12 h-12 mx-auto text-gold/30 animate-ping group-hover:animate-none">
+                    <Icon className="w-12 h-12 mx-auto transition-transform duration-300 text-cyan-300 group-hover:scale-110" />
+                    <div className="absolute inset-0 w-12 h-12 mx-auto text-cyan-300/30 animate-ping group-hover:animate-none">
                       <Icon className="w-12 h-12" />
                     </div>
                   </div>
-                  <h3 className="mb-3 text-xl font-semibold text-gold">
+                  <h3 className="mb-3 text-xl font-semibold text-secondary">
                     {service.title}
                   </h3>
                   <p className="text-gray-300">{service.description}</p>

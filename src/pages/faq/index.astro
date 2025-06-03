@@ -1,9 +1,9 @@
 ---
-import { Reservation } from "../../components/pages";
+import { FAQ } from "../../components/pages";
 import home from "../../data/home.json" with { type: "json" };
 import Layout from "../../layouts/Layout.astro";
 ---
 
-<Layout title={home.header.menu.reservation}>
-  <Reservation client:load />
+<Layout title={home.header.menu.faq}>
+  <FAQ client:load />
 </Layout>
