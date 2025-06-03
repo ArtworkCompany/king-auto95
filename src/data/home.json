@@ -53,21 +53,33 @@
     "slides": [
       {
         "title": "Nettoyage Intérieur Approfondi",
+        "description": "Aspiration et nettoyage minutieux de l'habitacle pour un intérieur impeccable",
         "before": "/images/carousel/before-1.jpeg",
-        "after": "/images/carousel/after-1.jpeg",
-        "description": "Aspiration et nettoyage minutieux de l'habitacle pour un intérieur impeccable"
+        "after": "/images/carousel/after-1.jpeg"
       },
       {
         "title": "Détachage Professionnel",
+        "description": "Élimination de taches tenaces sur moquettes",
         "before": "/images/carousel/before-2.jpeg",
-        "after": "/images/carousel/after-2.jpeg",
-        "description": "Élimination de taches tenaces sur moquettes"
+        "after": "/images/carousel/after-2.jpeg"
       },
       {
         "title": "Rénovation Plastiques et Cuirs",
+        "description": "Traitement et protection des matériaux pour leur redonner leur aspect d'origine",
         "before": "/images/carousel/before-3.jpeg",
-        "after": "/images/carousel/after-3.jpeg",
-        "description": "Traitement et protection des matériaux pour leur redonner leur aspect d'origine"
+        "after": "/images/carousel/after-3.jpeg"
+      },
+      {
+        "title": "",
+        "description": "",
+        "before": "/images/carousel/before-4.jpeg",
+        "after": "/images/carousel/after-4.jpeg"
+      },
+      {
+        "title": "",
+        "description": "",
+        "before": "/images/carousel/before-5.jpeg",
+        "after": "/images/carousel/after-5.jpeg"
       }
     ]
   },

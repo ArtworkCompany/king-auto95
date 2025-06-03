@@ -97,12 +97,12 @@ function BeforeAfterCarousel() {
         className="relative overflow-hidden border-2 shadow-lg rounded-2xl border-secondary/30 bg-gradient-to-br from-blue-800/60 via-indigo-800/50 to-blue-900/60 backdrop-blur cursor-grab active:cursor-grabbing"
       >
         <div className="p-8">
-          <div className="mb-8 text-center">
+          {/* <div className="mb-8 text-center">
             <h3 className="mb-2 text-2xl font-bold transition-all duration-500 text-secondary">
               {slides[currentSlide].title}
             </h3>
             <p className="text-white">{slides[currentSlide].description}</p>
-          </div>
+          </div> */}
 
           <div className="grid gap-8 md:grid-cols-2">
             <div className="relative group">
