@@ -1,32 +1,67 @@
 import { Crown } from "lucide-react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import home from "../../../data/home.json" with { type: "json" };
 import { cn } from "../../../lib/utils";
 
 function BeforeAfterCarousel() {
-  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const { slides } = home.carousel;
+
   const carouselRef = React.useRef<HTMLDivElement>(null);
   const touchStartX = React.useRef<number | null>(null);
+  const intervalRef = React.useRef<NodeJS.Timeout | null>(null);
 
-  const nextSlide = () => {
+  const startAutoSlide = () => {
+    stopAutoSlide();
+    intervalRef.current = setInterval(() => {
+      nextSlide(false); // auto slide, pas de reset
+    }, 5000);
+  };
+
+  const stopAutoSlide = () => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+  };
+
+  const goToSlide = (index: number) => {
+    if (isTransitioning) return;
+
+    setCurrentSlide(index);
+    startAutoSlide();
+    setIsTransitioning(true);
+    setTimeout(() => setIsTransitioning(false), 500);
+  };
+
+  const nextSlide = (resetTimer = true) => {
+    if (isTransitioning) return;
+
     setCurrentSlide((prev) => (prev + 1) % slides.length);
+    if (resetTimer) startAutoSlide();
+    setIsTransitioning(true);
+    setTimeout(() => setIsTransitioning(false), 500);
   };
 
   const prevSlide = () => {
+    if (isTransitioning) return;
+
     setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+    startAutoSlide();
+    setIsTransitioning(true);
+    setTimeout(() => setIsTransitioning(false), 500);
   };
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    startAutoSlide();
 
-    return () => clearInterval(interval);
+    return stopAutoSlide;
   }, [slides.length]);
 
   useEffect(() => {
+    const container = carouselRef.current;
+    if (!container) return;
+
     const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
       if (e.deltaY > 0) nextSlide();
       else prevSlide();
     };
@@ -44,21 +79,16 @@ function BeforeAfterCarousel() {
       touchStartX.current = null;
     };
 
-    const container = carouselRef.current;
-    if (container) {
-      container.addEventListener("wheel", handleWheel);
-      container.addEventListener("touchstart", handleTouchStart);
-      container.addEventListener("touchend", handleTouchEnd);
-    }
+    container.addEventListener("wheel", handleWheel, { passive: false });
+    container.addEventListener("touchstart", handleTouchStart);
+    container.addEventListener("touchend", handleTouchEnd);
 
     return () => {
-      if (container) {
-        container.removeEventListener("wheel", handleWheel);
-        container.removeEventListener("touchstart", handleTouchStart);
-        container.removeEventListener("touchend", handleTouchEnd);
-      }
+      container.removeEventListener("wheel", handleWheel);
+      container.removeEventListener("touchstart", handleTouchStart);
+      container.removeEventListener("touchend", handleTouchEnd);
     };
-  }, [slides.length]);
+  }, []);
 
   return (
     <div className="relative max-w-6xl mx-auto">
@@ -126,7 +156,7 @@ function BeforeAfterCarousel() {
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => goToSlide(index)}
             className={cn(`w-3 h-3 rounded-full transition-all duration-300`, {
               "bg-secondary scale-125": index === currentSlide,
               "bg-secondary/30 hover:bg-secondary/60": index !== currentSlide,
