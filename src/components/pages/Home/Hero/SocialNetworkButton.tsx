@@ -52,9 +52,9 @@ const SocialNetworkButton = () => {
         />
       </Button>
       {showSocialDropdown && (
-        <div className="absolute z-10 w-full mt-2 bg-blue-800 border-2 rounded-lg shadow-lg top-full border-cyan-300/30 shadow-cyan-300/20 backdrop-blur">
+        <div className="absolute z-20 w-full mt-2 bg-blue-800 border-2 rounded-lg shadow-lg top-full border-cyan-300/30 shadow-cyan-300/20 backdrop-blur">
           <div
-            className="flex items-center w-full gap-2 px-4 py-3 text-secondary transition-colors rounded-md cursor-pointer hover:bg-cyan-300/10"
+            className="flex items-center w-full gap-2 px-4 py-3 transition-colors rounded-md cursor-pointer text-secondary hover:bg-cyan-300/10"
             onClick={onSelectSocialNetwork(home.socialNetwork.instagram.url)}
           >
             <SiInstagram className="w-5 h-5 mr-2 text-secondary" />
@@ -68,7 +68,7 @@ const SocialNetworkButton = () => {
             </div>
           </div>
           <div
-            className="flex items-center w-full gap-2 px-4 py-3 text-secondary transition-colors rounded-md cursor-pointer hover:bg-cyan-300/10"
+            className="flex items-center w-full gap-2 px-4 py-3 transition-colors rounded-md cursor-pointer text-secondary hover:bg-cyan-300/10"
             onClick={onSelectSocialNetwork(home.socialNetwork.snapchat.url)}
           >
             <SiSnapchat className="w-5 h-5 mr-2 text-secondary" />
@@ -82,7 +82,7 @@ const SocialNetworkButton = () => {
             </div>
           </div>
           <div
-            className="flex items-center w-full gap-2 px-4 py-3 text-secondary transition-colors rounded-md cursor-pointer hover:bg-cyan-300/10"
+            className="flex items-center w-full gap-2 px-4 py-3 transition-colors rounded-md cursor-pointer text-secondary hover:bg-cyan-300/10"
             onClick={onSelectSocialNetwork(home.socialNetwork.tiktok.url)}
           >
             <SiTiktok className="w-5 h-5 mr-2 text-secondary" />
