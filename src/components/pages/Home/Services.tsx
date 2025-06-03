@@ -28,7 +28,7 @@ const Services = () => {
           <h2 className="mb-4 text-4xl font-bold text-secondary lg:text-5xl bg-clip-text">
             {home.services.title}
           </h2>
-          <p className="max-w-2xl mx-auto text-xl text-gray-300">
+          <p className="max-w-2xl mx-auto text-xl text-white">
             {home.services.description}
           </p>
         </div>
@@ -57,7 +57,7 @@ const Services = () => {
                   <h3 className="mb-3 text-xl font-semibold text-secondary">
                     {service.title}
                   </h3>
-                  <p className="text-gray-300">{service.description}</p>
+                  <p className="text-white">{service.description}</p>
                 </CardContent>
               </Card>
             );

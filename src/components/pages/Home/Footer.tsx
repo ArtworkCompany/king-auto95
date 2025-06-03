@@ -35,7 +35,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 transition-all duration-300 bg-blue-900 border-2 rounded-full group border-cyan-300/30 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-300/20"
               >
-                <SiInstagram className="w-6 h-6 text-white transition-transform duration-300 group-hover:scale-110" />
+                <SiInstagram className="w-6 h-6 text-secondary transition-transform duration-300 group-hover:scale-110" />
               </a>
               <a
                 href={home.socialNetwork.snapchat.url}
@@ -43,7 +43,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 transition-all duration-300 bg-blue-900 border-2 rounded-full group border-cyan-300/30 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-300/20"
               >
-                <SiSnapchat className="w-6 h-6 text-white transition-transform duration-300 group-hover:scale-110" />
+                <SiSnapchat className="w-6 h-6 text-secondary transition-transform duration-300 group-hover:scale-110" />
               </a>
               <a
                 href={home.socialNetwork.tiktok.url}
@@ -51,7 +51,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center w-12 h-12 transition-all duration-300 bg-blue-900 border-2 rounded-full group border-cyan-300/30 hover:border-cyan-300 hover:shadow-lg hover:shadow-cyan-300/20"
               >
-                <SiTiktok className="w-6 h-6 text-white transition-transform duration-300 group-hover:scale-110" />
+                <SiTiktok className="w-6 h-6 text-secondary transition-transform duration-300 group-hover:scale-110" />
               </a>
             </div>
             <div className="text-center">

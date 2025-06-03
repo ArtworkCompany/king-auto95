@@ -22,7 +22,7 @@ const Hero = () => {
               <div className="flex items-center pb-4 space-x-3">
                 <div className="relative">
                   <Crown className="w-12 h-12 text-secondary drop-shadow-lg" />
-                  <div className="absolute inset-0 w-12 h-12 text-secondary opacity-50 animate-pulse">
+                  <div className="absolute inset-0 w-12 h-12 opacity-50 text-secondary animate-pulse">
                     <Crown className="w-12 h-12" />
                   </div>
                 </div>
@@ -35,7 +35,7 @@ const Hero = () => {
                   {home.description}
                 </p>
               </div>
-              <p className="max-w-lg text-lg text-gray-300">
+              <p className="max-w-lg text-lg text-white">
                 {home.hero.description}
               </p>
             </div>

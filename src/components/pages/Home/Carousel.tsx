@@ -23,7 +23,7 @@ function BeforeAfterCarousel() {
             <h3 className="mb-2 text-2xl font-bold transition-all duration-500 text-secondary">
               {slides[currentSlide].title}
             </h3>
-            <p className="text-gray-300">{slides[currentSlide].description}</p>
+            <p className="text-white">{slides[currentSlide].description}</p>
           </div>
 
           <div className="grid gap-8 md:grid-cols-2">

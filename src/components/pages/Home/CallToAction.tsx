@@ -17,10 +17,10 @@ const CallToAction = () => {
               <Crown className="w-16 h-16" />
             </div>
           </div>
-          <h2 className="mb-6 text-4xl font-bold text-white lg:text-5xl">
+          <h2 className="mb-6 text-4xl font-bold text-secondary lg:text-5xl">
             {home.callToAction.title}
           </h2>
-          <p className="mb-12 text-xl text-white">
+          <p className="mb-12 text-xl text-secondary">
             {home.callToAction.description}
           </p>
 
@@ -37,7 +37,7 @@ const CallToAction = () => {
                 >
                   {home.callToAction.phoneNumber}
                 </a>
-                <p className="mt-4 text-white">
+                <p className="mt-4 text-secondary">
                   {home.callToAction.available7_7}
                 </p>
               </CardContent>
@@ -53,7 +53,7 @@ const CallToAction = () => {
                 <a href='tel:+33781184550' className="text-3xl font-bold text-secondary drop-shadow-lg">
                   {home.callToAction.phoneNumber}
                 </a>
-                <p className="mt-4 text-white">{home.callToAction.available7_7}</p>
+                <p className="mt-4 text-secondary">{home.callToAction.available7_7}</p>
               </CardContent>
             </Card>
 
@@ -66,7 +66,7 @@ const CallToAction = () => {
                 <a href={home.callToAction.instagram.url} target="_blank" className="mb-4 text-3xl font-bold text-secondary drop-shadow-lg">
                   {home.callToAction.instagram.username}
                 </a>
-                <p className="mt-4 text-white">{home.callToAction.lastRealization}</p>
+                <p className="mt-4 text-secondary">{home.callToAction.lastRealization}</p>
               </CardContent>
             </Card>
           </div> */}

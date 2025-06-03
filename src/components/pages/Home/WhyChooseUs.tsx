@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
                     <h3 className="mb-2 text-xl font-semibold text-secondary">
                       {section.title}
                     </h3>
-                    <p className="text-gray-300">{section.description}</p>
+                    <p className="text-white">{section.description}</p>
                   </div>
                 </div>
               ))}

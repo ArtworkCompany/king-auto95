@@ -62,7 +62,7 @@ const SocialNetworkButton = () => {
               <div className="font-semibold">
                 {home.socialNetwork.instagram.title}
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-white">
                 {home.socialNetwork.instagram.username}
               </div>
             </div>
@@ -76,7 +76,7 @@ const SocialNetworkButton = () => {
               <div className="font-semibold">
                 {home.socialNetwork.snapchat.title}
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-white">
                 {home.socialNetwork.snapchat.username}
               </div>
             </div>
@@ -90,7 +90,7 @@ const SocialNetworkButton = () => {
               <div className="font-semibold">
                 {home.socialNetwork.tiktok.title}
               </div>
-              <div className="text-sm text-gray-400">
+              <div className="text-sm text-white">
                 {home.socialNetwork.tiktok.username}
               </div>
             </div>
