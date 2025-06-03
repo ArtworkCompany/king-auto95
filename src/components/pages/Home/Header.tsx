@@ -1,5 +1,6 @@
 import type { MouseEvent } from "react";
 import home from "../../../data/home.json" with { type: "json" };
+import { cn } from "../../../lib/utils";
 
 interface Props {
   isHome: boolean;
@@ -21,7 +22,14 @@ const Header = ({ isHome }: Props) => {
   };
 
   return (
-    <header className="sticky top-0 z-50 border-b border-cyan-300/30 bg-primary/95 backdrop-blur supports-[backdrop-filter]:bg-primary/80 shadow-lg">
+    <header
+      className={cn(
+        "border-b border-cyan-300/30 bg-primary/95 backdrop-blur supports-[backdrop-filter]:bg-primary/80 shadow-lg",
+        {
+          "sticky top-0 z-50": isHome,
+        },
+      )}
+    >
       <div className="container flex items-center justify-between h-32 px-4 mx-auto lg:px-6">
         <a href="/" className="flex items-center space-x-2">
           <img
@@ -38,21 +46,21 @@ const Header = ({ isHome }: Props) => {
               <a
                 href="#"
                 onClick={handleScroll("services")}
-                className="text-secondary transition-colors hover:text-gray-300"
+                className="transition-colors text-secondary hover:text-gray-300"
               >
                 {home.header.menu.services}
               </a>
               <a
                 href="#"
                 onClick={handleScroll("about")}
-                className="text-secondary transition-colors hover:text-gray-300"
+                className="transition-colors text-secondary hover:text-gray-300"
               >
                 {home.header.menu.about}
               </a>
               <a
                 href="#"
                 onClick={handleScroll("contact")}
-                className="text-secondary transition-colors hover:text-gray-300"
+                className="transition-colors text-secondary hover:text-gray-300"
               >
                 {home.header.menu.contact}
               </a>
@@ -61,14 +69,14 @@ const Header = ({ isHome }: Props) => {
           )}
           <a
             href="/faq"
-            className="text-secondary transition-colors hover:text-gray-300"
+            className="transition-colors text-secondary hover:text-gray-300"
           >
             {home.header.menu.faq}
           </a>
           <span>|</span>
           <a
             href="/reservation"
-            className="text-secondary transition-colors hover:text-gray-300"
+            className="transition-colors text-secondary hover:text-gray-300"
           >
             {home.header.menu.reservation}
           </a>
